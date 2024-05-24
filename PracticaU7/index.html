@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudades del mundo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="mundo.png">
+</head>
+
+<body>
+    <!--Encabezado-->
+    <div class="encabezado">
+        <h1>CIUDADES DEL MUNDO</h1>
+    </div>
+    <!-- Formulario para agregar ciudades -->
+    <form id="city-form" action="#" method="post">
+        <label for="ciudad">Ciudad:</label><br>
+        <input type="text" id="ciudad" name="ciudad" class="campo-texto"><br>
+
+        <label for="pais">País:</label><br>
+        <input type="text" id="pais" name="pais" class="campo-texto"><br>
+
+        <!--Menú desplegable para elegir un mes del año-->
+        <label for="mes">Mejor mes para visitar:</label><br>
+        <select id="mes" name="mes" class="seleccion-mes">
+            <option value="selecciona">Selecciona una opción</option>
+            <option value="enero">Enero</option>
+            <option value="febrero">Febrero</option>
+            <option value="marzo">Marzo</option>
+            <option value="abril">Abril</option>
+            <option value="mayo">Mayo</option>
+            <option value="junio">Junio</option>
+            <option value="julio">Julio</option>
+            <option value="agosto">Agosto</option>
+            <option value="septiembre">Septiembre</option>
+            <option value="octubre">Octubre</option>
+            <option value="noviembre">Noviembre</option>
+            <option value="diciembre">Diciembre</option>
+        </select><br>
+
+        <input type="submit" id="btn-submit" value="Agregar Ciudad">
+    </form>
+    <!--Contenedor para las ciudades agregadas-->
+    <div id="ciudades-agregadas" class="ciudades-lista">
+
+    </div>
+
+    <!--Firebase y su configuración-->
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDzqTaJXzF66MhqPprWF7US-2bsl4Qa_8Y",
+            authDomain: "practicau7-26767.firebaseapp.com",
+            projectId: "practicau7-26767",
+            storageBucket: "practicau7-26767.appspot.com",
+            messagingSenderId: "565970597424",
+            appId: "1:565970597424:web:df02cff925a08d9d599ff5"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!--Enlace a JavaScript-->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
